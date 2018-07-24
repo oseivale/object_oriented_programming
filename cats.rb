@@ -12,7 +12,7 @@ class Cat
     if @meal_time <12
       return "#{@meal_time} am"
     else
-      return "#{@meal_time} pm"
+      return "#{@meal_time-12} pm"
     end
   end
 
@@ -49,5 +49,9 @@ puts pet.meow
 puts pet2.meow
 
 puts pet.preferred_game = "Jump" # --> changing the value set when method is called will require a getter to retrieve new info
-
+puts pet2.preferred_game = "Tag"
 puts pet.meow
+puts pet2.meow
+
+# --> you can use getters and setters as another way of receiving info
+# short cut for writing and reading multiple methods: attr_reader :(name of readert)
