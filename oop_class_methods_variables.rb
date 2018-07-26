@@ -55,22 +55,36 @@ class BankAccount
       end
   end
 
+  def self.accounts
+    return @@accounts
+  end
+
 end
 
 # print out amount of money
 # want to deposit some money in account
-bank_account = BankAccount.new
+bank_account = BankAccount.create
+bank_account2 = BankAccount.create
+bank_account3 = BankAccount.create
 
 puts bank_account.deposit(100)
 puts bank_account.withdraw(20)
 
-puts BankAccount.create
-puts BankAccount.interest_time
+puts bank_account2.deposit(150)
+puts bank_account2.withdraw(27)
+puts bank_account3.deposit(200)
+puts bank_account3.withdraw(76)
 
-puts bank_account.balance
+#
+# puts BankAccount.create
+# puts BankAccount.interest_time
+#
+# puts bank_account.balance
 puts BankAccount.total_funds
 
 puts bank_account.balance
-puts BankAccount.total_funds
+# puts BankAccount.total_funds
+#
+# puts BankAccount.interest_time
 
-puts BankAccount.interest_time
+p BankAccount.accounts.class
