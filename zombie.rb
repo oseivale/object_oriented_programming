@@ -84,6 +84,7 @@ class Zombie
 
   def self.create
     new_zombie = Zombie.new # * @@plague_level
+
     @@horde << new_zombie
     return new_zombie
   end
