@@ -66,6 +66,14 @@ class Vampire
     return @@coven
   end
 
+  def self.go_home
+    @@coven.each do |vampire|
+    vampire.in_coffin = true
+    end
+    return @@coven
+  end
+
+
 end
 # tom = Vampire.new("Tom", 25, true, true,)
 # p Vampire.new("Tom", 25, true, true,)
@@ -85,6 +93,12 @@ p Vampire.coven
 
 # p Vampire.coven
 #
-Vampire.sunset
+ Vampire.sunset
 
 p Vampire.coven
+
+# new_vampire = Vampire.new("Carmen", 23, true, false)
+
+p Vampire.go_home
+
+# p new_vampire
